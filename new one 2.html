@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body {
+    background: url(labelled\ scanner\ 6.png) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    cursor: none;
+    overflow: hidden;
+    margin: 0;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: calc(20px + 2vw);
+    font-weight: 700;
+    color: #fafafa;
+    text-shadow: 2px 2px 2px #000;
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+}
+.spotlight {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-image: radial-gradient(
+        circle,
+        transparent 160px,
+        rgba(256, 256, 2566, 256, 10) 200px
+    );
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+}
+#image-tsp {
+    height: 80vh;
+    margin-top: 50px;
+}
+
+    </style>
+</head>
+<body>
+    <main>
+
+        <h1></h1>
+
+        <div class="spotlight">
+            <img id="image-tsp" src="MRI-TransparentBG (2) (1).png" alt="">
+        </div>
+
+    </main>
+   
+
+<script>
+
+window.addEventListener("DOMContentLoaded", () => {
+
+const spotlight = document.querySelector('.spotlight');
+let imageTsp = document.querySelector('#image-tsp');
+let spotlightSize = 'transparent 160px, rgba(256, 256, 256, 10) 200px)';
+
+window.addEventListener('mousemove', e => updateSpotlight(e));
+
+window.addEventListener('mousedown', e => {
+
+    spotlightSize = 'transparent 130px, rgba(256, 256, 2566, 2566, 256, 10) 150px)';
+
+    updateSpotlight(e);
+
+});
+
+window.addEventListener('mouseup', e => {
+
+    spotlightSize = 'transparent 160px, rgba(256, 256, 256, 10) 200px)';
+
+    updateSpotlight(e);
+
+});
+
+function updateSpotlight(e) {
+
+    spotlight.style.backgroundImage = `radial-gradient(circle at ${e.pageX / window.innerWidth * 100}% ${e.pageY / window.innerHeight * 100}%, ${spotlightSize}`;
+    imageTsp.style.opacity = "0.1"
+
+}
+});
+</script>
+</body>
+
+</html>

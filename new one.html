@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      .carousel-inner > div:nth-last-of-type(1) {
+        background-color: blue;
+      }
+      .carousel-inner > div:nth-last-of-type(2) {
+        background-color: teal;
+      }
+      .carousel-inner > div:nth-last-of-type(3) {
+        background-color: cyan;
+      }
+      .carousel-inner > div:nth-last-of-type(4) {
+        background-color: navy;
+      }
+      .carousel-inner .carousel-item-end.active,
+      .carousel-inner .carousel-item-next {
+        transform: translateX(33.3%);
+      }
+      
+      .carousel-inner .carousel-item-start.active, 
+      .carousel-inner .carousel-item-prev {
+        transform: translateX(-33.3%);
+      }
+      .carousel-inner .carousel-item-right,
+      .carousel-inner .carousel-item-left{ 
+        transform: translateX(0);
+      }
+      .carousel-inner .carousel-item.active,
+      .carousel-inner .carousel-item-next,
+      .carousel-inner .carousel-item-prev {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      img {
+        width: 33.3vw;
+        height: 48vw;
+      }
+      .d-block {
+        width: 28.3vw;
+        background-color: #c5c5c5;
+        color: rgb(0, 0, 39);
+        z-index: 1;
+        margin-top: -3vw;
+        margin-right: 2vw;
+        margin-bottom: -3vw;
+        float: right;
+        position: relative;
+        padding: 2vw;
+        text-align: justify;
+
+      }
+      .casing {
+        background-color: white;
+        width: 33.3vw;
+        margin-left: 1vw;
+        
+      }
+      #box{
+        width: 5vw;
+        height: 5vw;
+        background-color: rgb(0, 0, 39);
+        float: right;
+      }
+      #boks{
+        width: 5vw;
+        height: 5vw;
+        background-color: #00ebff;
+        float: left;
+        
+        display: block;
+
+      }
+      #box-2{
+        width: 5vw;
+        height: 5vw;
+        background-color: rgb(0, 0, 39);
+        float: left;
+      }
+      #boks-2{
+        width: 5vw;
+        height: 5vw;
+        background-color: #00ebff;
+        float: right;
+        display: block;
+
+      }
+      body {
+        background-color: #EEEFF0;
+        margin: 0;
+      }
+      .cru, .curve {
+        border-top-left-radius: 25%;
+        border-bottom-right-radius: 25%;
+      }
+      .rev, .revCurve {
+        border-top-right-radius: 25%;
+        border-bottom-left-radius: 25%;
+      }
+      .curve, .revCurve {
+        height: 60vh;
+
+      }
+      #double{
+        width:24.3vw;
+        height: 50%;
+        position: relative;
+        /* z-index: 0 ; */
+      }
+      #double:nth-of-type(1) {
+        border-top-right-radius: 25%;
+      }
+      #double:nth-of-type(2) {
+        border-bottom-left-radius: 25%;
+      } 
+    </style>
+</head>
+<body>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="false"  data-keyboard="true" data-wrap="true">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <!-- <img  src="..." alt="First slide"> -->
+            <div class="casing cru">
+              <div id="box">
+              </div>
+              
+              <p class="d-block curve">
+                The MRI machine is a large, cylindrical (tube-shaped) machine that creates a strong magnetic field around the patient and sends pulses of radio waves from a scanner. The MRI scanner is essentially a giant magnet. The strength of the magnet is measured in a unit called Tesla (T). Most MRI scanners used in hospitals and medical research clinics are 1.5 or 3 T. Putting that in to perspective, the earth’s magnetic field is around 0.00006 T. A 3 T MRI scanner is around 60,000 times stronger than the earth’s magnetic field! Most of the human body is made up of water molecules, which consist of hydrogen and oxygen atoms. At the centre of each hydrogen atom is an even smaller particle called a proton. Protons are like tiny magnets and are very sensitive to magnetic fields.
+              </p>
+              <div id="boks">
+
+              </div>
+            </div>
+            
+          </div>
+          <div class="carousel-item">
+            <div class="casing rev">
+              <div id="box-2">
+              </div>
+              <img class="d-block revCurve" alt="Second slide" src="assets/img/first.jpg">
+              <div id="boks-2"></div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="casing  cru"> 
+              <div id="box">
+              </div>
+              <p class="d-block curve">
+                Magnetic Resonance Imaging (MRI) takes advantage of the fact that the nucleus of a hydrogen atom (a single proton) behaves like a weak compass needle. In the presence of a strong magnetic field, the hydrogen atoms will align themselves, but a radio signal of the correct resonant frequency will cause them to deflect slightly. When the signal is removed, the atoms return to their equilibrium state and emit a radio signal of their own. An MRI scanner can detect these signals and use them to map the distribution of molecules with lots of hydrogen atoms – ie, water and fat. In this way, it can create detailed images of the inside of the body.
+              </p>
+              <div id="boks">
+
+              </div> 
+            </div>         
+          </div>
+          <div class="carousel-item">
+            <div class="casing rev"> 
+              <div id="box-2">
+              </div>
+              <img class="d-block revCurve" src="assets/img/second.png" alt="Four slide">
+              <div id="boks-2"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="casing  cru"> 
+              <div id="box">
+              </div>
+
+              <p class="d-block curve">
+                At any moment in time, all the billions of hydrogen protons in our bodies are all in random positions and spinning on their axes. However, this randomness changes when we place a human body into a very strong magnetic field, like an MRI scanner. Just like a compass needle aligns to the Earth’s magnetic field, the strong magnetic field created by the MRI scanner causes the atoms in your body to align in the same direction. Their axes realign with the scanner's stronger magnetic field. The scanners magnetic field is called the B0 field. Just like a compass needle in the earth’s field, the compass itself does not physically move, but rather the needle spins to align itself.
+              </p>
+              <div id="boks">
+
+              </div>
+            </div>         
+          </div>
+          <div class="carousel-item">
+            <div class="casing rev">
+              <div id="box-2">
+              </div> 
+              <img class="d-block revCurve" src="assets/img/third1.jpg" alt="Four slide">
+              <div id="boks-2"></div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="casing cru"> 
+              <div id="box">
+              </div>
+              <p class="d-block curve">
+                Similarly, the hydrogen protons do not physically move in your body when you enter an MRI scanner, their axes just align along the direction of the B0 field. Some will align “up” (parallel) and some will align “down” (anti-parallel), while still spinning around on their own axes. Due to the wonderful laws of quantum physics, there are always just slightly more “up” protons than “down.” If you now think about the total magnet field generated from all our hydrogen protons, these tiny magnets almost cancel each other out, to leave only the magnetic field from the small proportion of extra “up” protons, and it is this small magnetic field that we can measure using MRI.
+              </p> 
+              <div id="boks">
+
+              </div>
+            </div>         
+          </div>
+          <div class="carousel-item">
+            <div class="casing rev"> 
+              <div id="box-2">
+              </div>
+              <div class="d-block revCurve">
+                <img id="double" src="assets/img/third2.jpg"> 
+                <img id="double" src="assets/img/third4.png">   
+              </div>
+              <div id="boks-2"></div>
+                         
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="casing cru"> 
+              <div id="box">
+              </div>
+              <p class="d-block curve">
+                The B0 field not only affects the hydrogen proton’s alignment, but also affects how fast these protons spin (called precessional frequency - The rate at which protons spin in a magnetic field.). The precessional frequency depends on the strength of the magnetic field. The stronger the magnetic field, the faster they spin. These two ideas of axis realignment and precessional frequency are important when we use MRI to measure the signal from these hydrogen molecules.
+              </p>
+              <div id="boks">
+
+              </div>
+            </div>                    
+          </div>
+          <div class="carousel-item">
+            <div class="casing rev"> 
+              <div id="box-2">
+              </div>
+              <h1 class="d-block revCurve">Radio Waves</h1>
+              <div id="boks-2"></div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="casing cru"> 
+              <div id="box">
+              </div>
+              <p class="d-block curve">
+                Radio waves are then sent from the MRI machine and move these atoms out of the original position. As the radio waves are turned off, the atoms return to their original position and send back radio signals.
+              </p> 
+              <div id="boks">
+              </div>
+            </div>         
+          </div>
+          <div class="carousel-item">
+            <div class="casing rev"> 
+              <div id="box-2">
+              </div>
+              <img class="d-block revCurve" src="assets/img/fourth.png" alt="Four slide">
+              <div id="boks-2"></div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="casing cru"> 
+              <div id="box">
+              </div>
+              <p class="d-block curve">
+                We use something called a radio frequency (RF)Radio frequency pulse to tip on resonance protons away from the B0 field. This pulse is used to disturb or flip all the protons, at the same time, out of alignment from the scanners magnetic field. The frequency of the RF pulse must be the same as the frequency of the spinning hydrogen protons, so they can exchange energy, so that they are on resonance, ie, have the same frequency. with each other. Resonance enables the protons to absorb enough energy from the RF pulse to rotate their axes away from the B0 field, so that the MRI scanner can measure it. If we think again about our compass in the Earth’s magnetic field pointing toward the north pole, we can make the needle rotate to point east if we place a small bar magnet next to the compass. This is similar to the way the protons behave when we turn on the RF pulse.
+              </p>
+              <div id="boks">
+              </div>
+            </div>          
+          </div>
+          <div class="carousel-item">
+            <div class="casing rev"> 
+              <div id="box-2">
+              </div>
+              <div class="d-block revCurve">
+                <img id="double" src="assets/img/third3.jpg"> 
+                <img id="double" src="assets/img/third5.png">   
+              </div>
+
+              <div id="boks-2"></div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="casing cru"> 
+              <div id="box">
+              </div>
+              <p class="d-block curve">
+                If the whole body is full of hydrogen “up” protons all spinning at the same precessing frequency in the B0, how do we target just the ones in the brain to investigate mental health? We use the fact that the precessional frequency of the protons is dependant on the magnetic field strength. We apply a second magnetic field, B1 that varies across the body. In the example shown in the next slide, hydrogen protons in the head will then be spinning faster than those in the chest, stomach and feet. Then, we tune the RF pulse to the precessing frequency of the hydrogen protons in the head. The RF pulse will then only be resonant with the protons in the brain. Therefore, only the protons in the brain will absorb energy from the RF pulse and be flipped away from the B0 field. We can obviously tune our RF pulse to be resonant with protons in other parts of the body, like the feet, if we were interested in imaging the feet!
+              </p>
+              <div id="boks">
+              </div>
+            </div>          
+          </div>
+          <div class="carousel-item">
+            <div class="casing rev"> 
+              <div id="box-2">
+              </div>
+              <img class="d-block revCurve" src="assets/img/fourth1.jpg" alt="Four slide">
+              <div id="boks-2"></div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="casing cru"> 
+              <div id="box">
+              </div>
+              <p class="d-block curve">
+                The signals are received by a computer and converted into an image of the part of the body being examined. This image appears on a viewing monitor.
+  
+                So how do we get an image from these spinning, flipped hydrogen protons in the brain? When the RF pulse is turned off, the protons flip back and realign along the main magnetic field, B0. If we think of our compass again, when we move our small bar magnet away, the needle will rotate from east to north and align with the Earth’s magnetic field once more. As the protons flip back and realign with B0, they give off energy. Different tissues in the body give off different amounts of energy.
+              </p> 
+              <div id="boks">
+              </div> 
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <div class="casing rev">
+              <div id="box-2">
+              </div> 
+              <img class="d-block revCurve" src="assets/img/fifth.jpg" alt="Four slide">
+              <div id="boks-2"></div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="casing cru"> 
+              <div id="box">
+              </div>
+              <p class="d-block curve">
+                To measure this emitted energy, we require some special equipment (called a coil) that is placed around the body part we are imaging. The coil acts as an antenna and detects the released energy as an electrical current. The electrical current is transformed, via a computer, using a mathematical calculation called a Fourier transformationA mathematical calculation that is used to change the electrical current in a coil into an image.. Because protons in the different kinds of tissues in the brain, such as gray matter, white matter and blood, all give off different amounts of energy, the result of the transformed energy is a highly detailed image of the tissue inside the brain.
+              </p> 
+              <div id="boks">
+              </div>
+            </div>
+                     
+          </div>
+          <div class="carousel-item">
+            <div class="casing rev"> 
+              <div id="box-2">
+              </div>
+              <img class="d-block revCurve" src="assets/img/fourth2.jpg" alt="Four slide">
+              <div id="boks-2"></div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="casing cru"> 
+              <div id="box">
+              </div>
+              <p class="d-block curve">
+                MRI may be used instead of computed tomography (CT) when organs or soft tissue are being studied. MRI is better at telling the difference between types of soft tissues and between normal and abnormal soft tissues.
+  
+                Because ionizing radiation is not used, there is no risk of exposure to radiation during an MRI procedure.
+  
+                Newer uses for MRI have contributed to the development of additional magnetic resonance technology. Magnetic resonance angiography (MRA) is a procedure used to evaluate blood flow through arteries. MRA can also be used to detect aneurysms in the brain and vascular malformations — abnormalities of blood vessels in the brain, spinal cord or other parts of the body.
+              </p>
+              <div id="boks">
+              </div>
+            </div>
+                      
+          </div>
+          <div class="carousel-item">
+            <div class="casing rev"> 
+              <div id="box-2">
+              </div>
+              <img class="d-block revCurve" src="assets/img/mra.jpg" alt="Four slide">
+              <div id="boks-2"></div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="casing cru"> 
+              <div id="box">
+              </div>
+              <p class="d-block curve">
+                Functional magnetic resonance imaging (fMRI) of the brain is used to determine the specific location in the brain where a certain function, such as speech or memory, occurs. The general areas of the brain in which such functions occur are known, but the exact location may vary from person to person. During fMRI of the brain, you will be asked to perform a specific task, such as reciting the Pledge of Allegiance. By pinpointing the exact location of the functional center in the brain, doctors can plan surgery or other treatments for a brain disorder.
+              </p> 
+              <div id="boks">
+              </div>
+            </div>
+                     
+          </div>
+          <div class="carousel-item">
+            <div class="casing rev"> 
+              <div id="box-2">
+              </div>
+              <img class="d-block revCurve" src="assets/img/fmri.webp" alt="Four slide">
+              <div id="boks-2"></div>
+            </div>
+          </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script>
+        let items = document.querySelectorAll('.carousel .carousel-item')
+
+        items.forEach((el) => {
+            // number of slides per carousel-item
+            const minPerSlide = 3
+            let next = el.nextElementSibling
+            for (var i=1; i<minPerSlide; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+      </script>
+</body>
+</html>

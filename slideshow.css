@@ -1,0 +1,234 @@
+
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(33.3%);
+  }
+  
+  .carousel-inner .carousel-item-start.active, 
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-33.3%);
+  }
+  .carousel-inner .carousel-item-right,
+  .carousel-inner .carousel-item-left{ 
+    transform: translateX(0);
+  }
+  .carousel-inner .carousel-item.active,
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .d-block {
+    width: 86%;
+    background-color: #c5c5c5;
+    color: rgb(0, 0, 39);
+    z-index: 1;
+    margin-top: max(-3vw, -48px);
+    margin-right: min(2vw, 32px);
+    margin-bottom: max(-3vw, -48px);
+    float: right;
+    position: relative;
+    padding: min(2vw, 32px);
+    text-align: justify;
+
+  }
+  .casing {
+    background-color: white;
+    width: 33.3%;
+    margin-left: min(1vw, 16px);
+    
+  }
+  #box{
+    width: 5vw;
+    height: 5vw;
+    background-color: rgb(0, 0, 39);
+    float: right;
+    max-width: 80px;
+    max-height: 80px;
+  }
+  #boks{
+    width: 5vw;
+    height: 5vw;
+    background-color: #00ebff;
+    float: left;  
+    display: block;
+    max-width: 80px;
+    max-height: 80px;
+
+  }
+  #box-2{
+    width: 5vw;
+    height: 5vw;
+    background-color: rgb(0, 0, 39);
+    float: left;
+    max-width: 80px;
+    max-height: 80px;
+  }
+  #boks-2{
+    width: 5vw;
+    height: 5vw;
+    background-color: #00ebff;
+    float: right;
+    display: block;
+    max-width: 80px;
+    max-height: 80px;
+
+  }
+
+  .cru, .curve {
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+  }
+  .rev, .revCurve {
+    border-top-right-radius: 25%;
+    border-bottom-left-radius: 25%;
+  }
+  .curve, .revCurve {
+    height: 50vh;
+    font-size: min(1vw, 16px);
+    min-height: 450px;
+    max-height: 550px;
+
+  }
+  .long {
+    font-size: min(0.8vw, 12px);
+  }
+  #double{
+    width: 100%;
+    height: 50%;
+    position: relative;
+    /* z-index: 0 ; */
+  }
+  #double:nth-of-type(1) {
+    border-top-right-radius: 25%;
+  }
+  #double:nth-of-type(2) {
+    border-bottom-left-radius: 25%;
+  }
+  
+  @media (min-width: 1400px) {
+    .curve, .revCurve {
+        font-size: 0.9rem;
+    }
+    .long {
+      font-size: 0.7vw;
+    }
+  }
+
+
+  @media (max-width: 1100px) {
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(50%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-50%);
+    }
+    .carousel-inner .carousel-item-right,
+    .carousel-inner .carousel-item-left{ 
+      transform: translateX(0);
+    }
+    .casing{
+      width: 50%;
+      height: 50vh;
+      min-height: 350px;
+    }
+    
+    .d-block {
+      width: 91%;
+      height: 90%;
+      min-height: 300px;
+      padding: 3vw;
+      font-size: 1.3vw;
+    }
+    .long{
+      font-size: 1.2vw;
+    }
+  
+  }
+  @media (max-width: 992px) {
+    #how{
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    .d-block {
+      width: 88%;
+      font-size: 11px;
+      min-height: 250px;
+    }
+    .casing {
+      height: 40vh;
+      min-height: 300px;
+    }
+    .long{
+      font-size: 9px;
+    }
+
+  }
+  @media (max-width: 800px) {
+ 
+      .d-block{
+        width: 90.5%
+      }
+
+  }
+  @media (max-width:768px) {
+    #how {
+      max-width: 840px;
+      width: 90vw;
+    }
+    .d-block{
+      font-size: max(1.5vw, 9px);
+    }
+    
+  }
+  @media (max-width:575px) {
+    .casing{
+      max-height: 310px;
+      height: 35vh;
+      min-height: 200px;
+    }
+    .d-block{
+      font-size: max(1.6vw, 7px);
+    }
+    .long {
+      font-size: 7px;
+    }
+  }
+  @media (max-width: 430px){
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+      display: block;
+      align-content: center;
+      justify-content: center;
+    }
+    .casing {
+      width: 100%;
+      margin-bottom: 2%;
+    }
+    .cru, .curve, .rev, .revCurve {
+      border-top-left-radius: 25%;
+      border-bottom-right-radius: 25%;
+      border-top-right-radius: 25%;
+      border-bottom-left-radius: 25%;
+    }
+    #box, #box-2, #boks, #boks-2 {
+      display: none;
+    }
+    .d-block {
+      width: 90%;
+      margin: 5%;
+      font-size: max(2.5vw, 9px);
+    }
+    .curve {
+      padding: 6vw;
+    }
+    .long {
+      font-size: max(2.2vw, 8px);
+    }
+  }
