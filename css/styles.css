@@ -11408,7 +11408,7 @@ aside {
 
 .device[data-image=iPhoneX][data-orientation=portrait][data-color=black]::after {
   content: "";
-  background-image: url("../MRI-TransparentBG\ \(2\)\ \(1\).png");
+  background-image: url("https://raw.githubusercontent.com/augusta-dev/scanner/main/MRI-TransparentBG%20(2)%20(1).png");
 }
 
 .device[data-image=iPhoneX][data-orientation=portrait][data-color=black] .button {
