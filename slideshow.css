@@ -87,13 +87,13 @@
   }
   .curve, .revCurve {
     height: 50vh;
-    font-size: min(1vw, 16px);
+    font-size: min(1vw, 13px);
     min-height: 450px;
     max-height: 550px;
 
   }
   .long {
-    font-size: min(0.8vw, 12px);
+    font-size: min(0.8vw, 11px);
   }
   #double{
     width: 100%;
@@ -110,7 +110,7 @@
   
   @media (min-width: 1400px) {
     .curve, .revCurve {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
     .long {
       font-size: 0.7vw;
@@ -150,7 +150,7 @@
     }
   
   }
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     #how{
       padding-left: 0 !important;
       padding-right: 0 !important;
@@ -158,11 +158,11 @@
     .d-block {
       width: 88%;
       font-size: 11px;
-      min-height: 250px;
+      min-height: 300px;
     }
     .casing {
       height: 40vh;
-      min-height: 300px;
+      min-height: 380px;
     }
     .long{
       font-size: 9px;
@@ -177,7 +177,7 @@
 
   }
   @media (max-width:768px) {
-    #how {
+    #how, #feat, #importance, #history, .navv {
       max-width: 840px;
       width: 90vw;
     }
@@ -189,8 +189,8 @@
   @media (max-width:575px) {
     .casing{
       max-height: 310px;
-      height: 35vh;
-      min-height: 200px;
+      /* height: 35vh;
+      min-height: 200px; */
     }
     .d-block{
       font-size: max(1.6vw, 7px);
@@ -223,7 +223,7 @@
     .d-block {
       width: 90%;
       margin: 5%;
-      font-size: max(2.5vw, 9px);
+      font-size: min(max(3vw, 6px), 10px);
     }
     .curve {
       padding: 6vw;

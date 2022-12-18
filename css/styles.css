@@ -61,7 +61,7 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 500;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
+  --bs-body-color: rgb(0, 0, 39);
   --bs-body-bg: #fff;
 }
 #page-top{
@@ -11303,7 +11303,7 @@ html {
 }
 
 .bg-black {
-  background-color: #000 !important;
+  background-color: rgb(0, 0, 39) !important;
 }
 
 .bg-gradient-primary-to-secondary {
@@ -11325,6 +11325,9 @@ aside,
 section {
   padding-top: 3rem;
 }
+aside {
+  padding-bottom: 2rem;
+}
 
 .app-badge {
   height: 3rem;
@@ -11344,10 +11347,10 @@ section {
 #mainNav .navbar-toggler {
   font-size: 0.875rem;
   padding: 0.75rem 1rem;
-  color: #212529;
+  color: rgb(0, 0, 39);
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: #212529;
+  color: rgb(0, 0, 39);
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #6c757d;
@@ -11419,15 +11422,13 @@ section {
 section.cta {
   position: relative;
   padding: 5rem 0;
-  background-image: url("scanner.jpg");
-  background-position: center;
-  background-size: cover;
-  min-height: 800px;
+  
   
 }
 section.cta .cta-content {
   position: relative;
   z-index: 0;
+  border-top: 2px dotted #fff;
 }
 section.cta:before {
   content: "";
@@ -11436,8 +11437,9 @@ section.cta:before {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.5;
-  background-color: #000;
+  /* opacity: 0.5; */
+  background-color: rgba(var(--bs-light-rgb));
+  border-top: 2px solid #C5C5C5;
 }
 
 .icon-feature {
@@ -11591,7 +11593,7 @@ footer a:hover, footer a:active, footer a:focus {
   width: 0.75rem;
   fill: #00ebff;
   top: 7%;
-  right: -3%;
+  left: 90%;
 }
 .masthead .masthead-device-mockup .device-wrapper {
   max-width: 10rem;
@@ -11652,19 +11654,23 @@ footer a:hover, footer a:active, footer a:focus {
   .masthead {
     padding-top: 7.5rem;
   }
-  .container{ 
-    max-width: 500px;
+  .navv, .m-head{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
+  /* .container{ 
+    max-width: 500px;
+  } */
 }
 @media (min-width: 768px) and (max-width: 991px){
   .device::after {
-    height: 110%;
+    /* height: 110%; */
     width: 100%;
   }
   
 }
 
-@media (min-width: 992px) and (max-width: 1023px){
+@media (min-width: 992px) and (max-width: 1024px){
   .device::after {
     height: 90%;
     width: 100%;
@@ -11672,6 +11678,9 @@ footer a:hover, footer a:active, footer a:focus {
   .shape-2 {
     position: absolute;
     right: 3%;
+  }
+  .m-head{
+    padding-left: 0;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px){
@@ -11717,7 +11726,126 @@ a {
 #long {
   color: #00ebff;
 }
+#importance {
+  color: rgb(0, 0, 39);
+  z-index: 1;
+  position: relative;
+}
+#in{
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  width: 100%
+}
+.importance-part-1 {
+  width: 49%;
+}
+.importance-part-2 {
+  width: 49%;
+}
+.imp > div {
+  width: 100%;
+  border-radius: 5%;
+}
+.imp > img {
+  width: 100%;
+  height: 32vh;
+  min-height: 255px;
+  max-height: 400px;
+  border-radius: 5%;
+  margin-top: 2%;
+  opacity: 0.5;
+  background-color: #00ebff;
+}
+.imp > img:hover {
+  opacity: 1;
+}
 
+#disp{
+  display: flex;
+  width: 49%;
+  justify-content: space-between;
+}
+#feat, #how {
+  padding-bottom: 3rem;
+}
+#lists {
+  line-height: 01rem;
+  font-size: min(0.8vw, 2rem);
+  padding-left: 1rem;
+}
+/* #one-part {
+  width: 20%
+}
+#one-part-2 {
+  width: 20%
+}
+#one-part-1 {
+  width: 36%;
+  text-align: justify;
+} */
+/* #one-part-3 > h2, #one-part-1 > h2, #one-part-2 > h2, #one-part > h2 {
+} */
+/* #one-part > p {
+  font-size: 0.7rem;
+  margin-bottom: -0.1rem;
+} */
+#why{
+  text-align: justify;
+}
+#vid{
+  width: 100%;
+  opacity: 0.5;
+  border-radius: 5%;
+  background-color: #00ebff;
+
+}
+#vid:hover{
+  opacity: 1;
+}
+#disp > div{
+  width: 49.3%;
+}
+#part-part {
+  text-align: justify;
+}
+#part-part > div > h2 {
+  font-size: 1.2rem;
+  margin-bottom: -0.1rem;  
+}
+#part-part > div > p {
+  font-size: 0.7rem;
+  margin-bottom: -0.1rem;  
+}
+
+#historyy{
+  background-image: url("scanner.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 800px;
+}
+#history{
+  color: white;
+  padding-bottom: 3rem;
+}
+#none {
+  margin-bottom: 0;
+}
+#a-part{
+  width: 100%
+}
+#a-part > p{
+  width: 49.3%;
+  font-size: 0.8rem;
+  text-align: justify;
+}
+#nobel > p{
+  font-size: 0.8rem;
+  text-align: justify;
+}
+#impor {
+  margin-top: -15px
+}
 
 @media (max-width: 1400px) {
   #parts {
@@ -11729,7 +11857,7 @@ a {
   #parts {
     height: 55vh;
   }
-  #feat {
+  .navv, #feat, #importance, #history {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
@@ -11739,17 +11867,22 @@ a {
   .parts-text {
     width: 25%;
   }
+  
 }
-@media (min-width: 992px) and (max-width: 1120px) {
+@media (min-width: 992.4px) and (max-width: 1120px) {
   #shape-2 {
     right: 0;
+    left: 100%;
   }
-  #feat {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+  #feat, #importance, #history, .navv{
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+  #lists{
+    line-height: 0.8rem
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 992.3px) {
   .lead {
     margin-bottom: 2px !important;
   }
@@ -11760,15 +11893,20 @@ a {
   .parts-text > div > div > p {
     font-size: 0.7rem;
   }
-  #feat {
+  .navv, #feat, #how, #importance, #history {
     max-width: 840px;
-    width: 90vw;
   }
   #parts {
     height: 45vh;
   }
   #quote{
     font-size: calc(1.325rem + 0.9vw) !important;
+  }
+  #why{
+    font-size: 13px;
+  }
+  #lists{
+    line-height: 0.8rem
   }
 }
 
@@ -11781,6 +11919,11 @@ a {
 }
 #logo-1 {
   height: 13rem;
+}
+@media (max-width: 900px){
+  .navv, #feat, #how, #importance, #history {
+    max-width: 750px;
+  }
 }
 @media(max-width: 800px ) {
   /* .parts-text > div > p {
@@ -11825,18 +11968,50 @@ a {
 
   .parts-text > div > div > p {
     font-size: 0.7rem;
-    line-height: 0.1rem;
-  }
-
-  .parts-text > div > div > p {
-    font-size: 0.7rem;
     line-height: 0.9rem;
   }
   .lead {
     line-height: 1rem;
     font-size: 0.7rem
   }
+  #why, #a-part > p, #nobel > p {
+    font-size: max(1.5vw, 9px);
+  }
+  #a-part > p {
+    width: 49%;
+    margin-bottom: 0.5rem;
+  }
+ 
 }
+@media (max-width: 780px){
+  .navv, #feat, #how, #importance, #history {
+    max-width: 670px;
+  }
+  #in:nth-of-type(2) {
+    display: block;
+    width: 100%;;
+  }
+  #in:nth-of-type(2)>.importance-part-1,  #in:nth-of-type(2)>.importance-part-2{
+    width: 100%;
+  }
+  #lists {
+    font-size: max(1.6vw, 7px);
+    line-height: 1.2;
+  }
+  #part-part > div > h2 {
+    margin-bottom: 0.1rem;
+  }
+  #part-part > div > p {
+    font-size: 0.7rem;
+    margin-bottom: -0.1rem;  
+  }
+  .imp>img {
+    height: 23vh;
+    min-height: 200px;
+    max-height: 250px;
+  }
+}
+
 @media (max-width: 575px) {
   .display-1 {
     font-size: calc(20px + 4vw)
@@ -11847,6 +12022,10 @@ a {
   }
   .lead {
     font-size: 0.7rem;
+  }
+  .parts-text > div > div > p {
+    font-size: max(1.7vw, 7px);
+    line-height: 0.7rem;
   }
   .device::after {
     height: 80vw;
@@ -11865,6 +12044,9 @@ a {
   aside{
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+  #why, #a-part > p, #nobel > p{
+    font-size: max(1.6vw, 7px);
   }
 
 }
@@ -11890,86 +12072,48 @@ a {
     justify-content: space-between;
   }
 }
-#importance {
-  color: #ffffff;
-  z-index: 1;
-  position: relative;
-}
-#in{
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  width: 100%
-}
-.importance-part-1 {
-  width: 49%;
-}
-.importance-part-2 {
-  width: 49%;
-}
-.imp > div {
-  width: 100%;
-  border-radius: 5%;
-}
-.imp > img {
-  width: 100%;
-  height: 32vh;
-  min-height: 255px;
-  max-height: 400px;
-  border-radius: 5%;
-  margin-top: 2%;
+
+@media(max-width: 430px){
+ .imp > img{
+  min-height: 180px;
+  height: 22vh; 
+  max-height: 240px;
+  }
+  .parts-text > div > div > p {
+    font-size: min(max(3vw, 6px), 10px);
+  }
+  #why{
+    line-height: 1.2;
+  }
+  #in:nth-of-type(2) {
+    display: block;
+    width: 100%;;
+  }
+  #in:nth-of-type(2)>.importance-part-1,  #in:nth-of-type(2)>.importance-part-2{
+    width: 100%;
+  }
+  #lists {
+    font-size: max(1.6vw, 7px);
+    line-height: 1.2;
+  }
+  #part-part > div > h2 {
+    margin-bottom: 0.1rem;
+  }
+  #part-part > div > p {
+    font-size: 0.7rem;
+    margin-bottom: -0.1rem;  
+  }
+  #in:nth-of-type(2)>.importance-part-1 > div{
+    width: 47%;
+  }
+  #a-part > p {
+    width: 100%
+  }
+  
 }
 
-#disp{
-  display: flex;
-  width: 49%;
-  justify-content: space-between;
-}
-#feat, #importance, #how {
-  padding-bottom: 2rem;
-}
-#lists {
-  line-height: 01rem;
-  font-size: min(0.8vw, 2rem);
-  padding-left: 1rem;
-}
-#one-part {
-  width: 20%
-}
-#one-part-2 {
-  width: 20%
-}
-#one-part-1 {
-  width: 36%;
-  text-align: justify;
-}
-#one-part-3 > h2, #one-part-1 > h2, #one-part-2 > h2, #one-part > h2 {
-  font-size: 1.2rem;
-}
-#one-part > p {
-  font-size: 0.7rem;
-  margin-bottom: -0.1rem;
-}
-#why{
-  text-align: justify;
-}
-#vid{
-  width: 100%;
-}
-#part-part{
-  display: flex;
-  width: 40%;
-  justify-content: space-between;
 
-}
-#one-part-3 {
-  width: 50%;
-}
-#one-part-2 {
-  width: 50%;
-}
-
-@media (max-width: 1310px) {
+/* @media (max-width: 1310px) {
   #disp {
     width: 59%;
   }
@@ -12001,8 +12145,17 @@ a {
     width: 20%;
     
   }
+} */
+@media (min-width: 1290px) {
+  .px-5{
+    padding-left: 7rem !important;
+    padding-right: 7rem !important;
+  }
 }
-@media (max-width: 1200px) {
 
-}
+/* @media(max-width:1100px){
+  #why{
+    font-size: 1.3vw;
+  }
+} */
 
