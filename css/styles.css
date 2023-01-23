@@ -11588,12 +11588,7 @@ footer a:hover, footer a:active, footer a:focus {
 }
 
 @media(min-width: 576px) and (max-width: 767px) {
-  .device::after {
-    height: 55vh;
-    width: 110%;
-    margin-left: -5vw;
-    min-height: 440px;
-  }
+  
   .first {
     padding-right: 1rem !important;
     padding-left: 1rem !important;
@@ -11942,6 +11937,8 @@ a {
   }
  
 }
+
+
 @media (max-width: 780px){
   .navv, #feat, #how, #importance, #history {
     max-width: 670px;
@@ -11972,6 +11969,12 @@ a {
   #mainScanner{
     height: 500px;
     
+  }
+}
+
+@media (min-width: 768px) and (max-width: 781px) {
+  #mainScanner{
+    height: 560px;
   }
 }
 
