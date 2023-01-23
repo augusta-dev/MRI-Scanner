@@ -11365,59 +11365,6 @@ aside {
  * Licensed under MIT (https://github.com/pixelsign/html5-device-mockups/blob/master/LICENSE.txt)
  * Last Build: Tue Nov 14 2017 12:40:57
  */
-.device-wrapper {
-  max-width: 800px;
-  width: 100%;
-}
-
-.device {
-  /* position: relative; */
-  background-size: cover;
-  overflow:auto;
-}
-
-.device::after {
-  position: absolute;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.device .screen {
-  position: absolute;
-  background-size: cover;
-  pointer-events: auto;
-}
-
-.device .button {
-  position: absolute;
-  cursor: pointer;
-}
-
-.device[data-image=iPhoneX][data-orientation=portrait][data-color=black] {
-  padding-bottom: 240.898071625%;
-}
-
-.device[data-image=PhoneX][data-orientation=portrait][data-color=black] .screen {
-  top: 3.1855955679%;
-  left: 60.8870523416%;
-  width: 86.2258953168%;
-  height: 93.6288088643%;
-}
-
-.device[data-image=iPhoneX][data-orientation=portrait][data-color=black]::after {
-  content: "";
-  background-image: url("../MRI-TransparentBG\ \(2\)\ \(1\).png");
-}
-
-.device[data-image=iPhoneX][data-orientation=portrait][data-color=black] .button {
-  display: none;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-}
 
 section.cta {
   position: relative;
@@ -11846,6 +11793,10 @@ a {
 #impor {
   margin-top: -15px
 }
+#mainScanner{
+  height: clamp(500px, 44vw, 700px);
+  margin-left: -15px;
+}
 
 @media (max-width: 1400px) {
   #parts {
@@ -11881,6 +11832,10 @@ a {
   #lists{
     line-height: 0.8rem
   }
+  #mainScanner{
+    height: clamp(400px, 50.5vw, 565px);
+    margin-left: -15px;
+  }
 }
 @media (max-width: 992.3px) {
   .lead {
@@ -11907,6 +11862,10 @@ a {
   }
   #lists{
     line-height: 0.8rem
+  }
+  #mainScanner{
+    height: 560px;
+    margin-left: -15px;
   }
 }
 
@@ -12010,6 +11969,10 @@ a {
     min-height: 200px;
     max-height: 250px;
   }
+  #mainScanner{
+    height: 500px;
+    
+  }
 }
 
 @media (max-width: 575px) {
@@ -12032,9 +11995,6 @@ a {
     width: 90vw;
     margin-left: -5vw;
   }
-  .device[data-image=iPhoneX][data-orientation=portrait][data-color=black] {
-    padding-bottom: calc(100px + 51vw);
-  }
   #quote{
     font-size: calc(1rem + 0.5vw) !important;
   }
@@ -12048,8 +12008,13 @@ a {
   #why, #a-part > p, #nobel > p{
     font-size: max(1.6vw, 7px);
   }
+  #mainScanner{
+    height: clamp(300px, 76vw, 420px);
+    margin-left: -15px;
+  }
 
 }
+
 @media (max-width: 475px) {
   #half {
     display: none;
@@ -12109,9 +12074,19 @@ a {
   #a-part > p {
     width: 100%
   }
+  #mainScanner{
+    margin-left: -20px;
+  }
   
 }
+@media (max-width: 375px) {
 
+  #mainScanner{
+    height: clamp(200px, 73vw, 300px);
+
+  }
+
+}
 
 /* @media (max-width: 1310px) {
   #disp {

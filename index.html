@@ -70,11 +70,7 @@
                             <div class="device-wrapper">
                                 <div class="device" data-image="iPhoneX" data-orientation="portrait" data-color="black">
                                     <div class="screen">
-                                        <!-- PUT CONTENTS HERE:-->
-                                        <!-- * * This can be a video, image, or just about anything else.-->
-                                        <!-- * * Set the max width of your media to 100% and the height to-->
-                                        <!-- * * 100% like the demo example below.-->
-                                        <!-- <video muted="muted" autoplay="" loop="" style="max-width: 100%; height: 100%"><source src="assets/img/demo-screen.mp4" type="video/mp4" /></video> -->
+                                        <img src="MRI-TransparentBG (2) (1).png" id="mainScanner" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -704,6 +700,46 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
      
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+          let items = document.querySelectorAll('.carousel .carousel-item')
+
+function rede() {
+    if (window.innerWidth <= 1100 ) {
+        items.forEach((el) => {
+            // number of slides per carousel-item
+            const minPerSlide = 2
+            let next = el.nextElementSibling
+            for (var i=1; i<minPerSlide; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+    } else {
+        items.forEach((el) => {
+            // number of slides per carousel-item
+            const minPerSlide = 3
+            let next = el.nextElementSibling
+            for (var i=1; i<minPerSlide; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+    }
+}
+
+rede()
+        </script>
+        
         <script src="slideshow.js"></script>
         <script src="js/scripts.js"></script>
 
